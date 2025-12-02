@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alea Scheduler - Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="relative min-h-screen flex flex-col">
+
+    <!-- Stochastic Background Canvas -->
+    <div id="canvas-container">
+        <canvas id="stochasticCanvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-white/5 bg-black/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/svg/logo.svg" alt="Alea Logo" width="32" height="32">
+                <span class="text-xl font-bold tracking-tight text-white">ALEA <span
+                        class="font-light text-blue-400">SCHEDULER</span></span>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                <a href="index.html" class="nav-link hover:text-white transition-colors">Home</a>
+                <a href="technology.html" class="nav-link hover:text-white transition-colors">Technology</a>
+                <a href="solutions.html" class="nav-link hover:text-white transition-colors text-white">Solutions</a>
+            </div>
+
+            <!-- CTA -->
+            <div>
+                <a href="#"
+                    class="text-white border border-blue-600 bg-blue-600/10 px-4 py-2 rounded-md hover:bg-blue-600 hover:text-white transition-all text-sm font-medium">Get
+                    Access</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-20 px-6 max-w-7xl mx-auto w-full">
+
+        <div class="mb-12">
+            <h1 class="text-4xl font-bold text-white mb-4">Solutions</h1>
+            <p class="text-gray-400 max-w-2xl">Tailored optimization for complex industries.</p>
+        </div>
+
+        <!-- Target Audience -->
+        <section class="glass-panel p-8 rounded-xl border border-gray-800">
+            <h2 class="text-2xl font-bold text-white mb-6">Industries</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 text-center">
+                    <h3 class="font-bold text-white mb-4 text-lg">Transportation</h3>
+                    <p class="text-sm text-gray-400">Bus and logistics companies with complex driver schedules.</p>
+                </div>
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 text-center">
+                    <h3 class="font-bold text-white mb-4 text-lg">Healthcare</h3>
+                    <p class="text-sm text-gray-400">Hospitals and clinics that need to manage shifts for doctors and
+                        nurses, ensuring coverage and compliance.</p>
+                </div>
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 text-center">
+                    <h3 class="font-bold text-white mb-4 text-lg">24/7 Services</h3>
+                    <p class="text-sm text-gray-400">Call centers, security firms, and industries with uninterrupted
+                        shifts requiring constant staffing.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-12 border-t border-gray-800 text-center mt-auto">
+        <p class="text-gray-500 text-sm font-mono">© 2025 Alea Technologies. Order through stochastic intelligence.</p>
+    </footer>
+
+    <script src="js/background.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
