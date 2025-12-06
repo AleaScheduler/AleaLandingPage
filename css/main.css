@@ -82,7 +82,6 @@ h6 {
     background: linear-gradient(135deg, var(--color-primary) 0%, #C79F36 100%);
     /* Int. Orange to Ochre Gold */
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
