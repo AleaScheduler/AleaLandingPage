@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alea Scheduler - Stochastic Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/theme.js"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600&family=Manrope:wght@300;400;600;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="relative min-h-screen flex flex-col">
+<body
+    class="relative min-h-screen flex flex-col font-sans text-onyx dark:text-alabaster bg-alabaster dark:bg-obsidian transition-colors duration-300">
 
     <!-- Stochastic Background Canvas -->
     <div id="canvas-container">
@@ -20,26 +22,46 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 top-0 left-0 border-b border-white/5 bg-black/50 backdrop-blur-md">
+    <nav
+        class="fixed w-full z-50 top-0 left-0 border-b border-black/5 dark:border-white/5 bg-white/70 dark:bg-black/50 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-3 group">
+            <a href="index.html" class="flex items-center gap-3 group logo-card px-2 py-1 rounded-lg">
                 <img src="assets/svg/logo.svg" alt="Alea Logo" width="32" height="32">
-                <span class="text-xl font-bold tracking-tight text-white">ALEA <span
-                        class="font-light text-blue-400">SCHEDULER</span></span>
+                <span class="text-xl font-bold tracking-tight">ALEA <span
+                        class="font-light text-international-orange">SCHEDULER</span></span>
             </a>
 
             <!-- Navigation Links -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
-                <a href="index.html" class="nav-link hover:text-white transition-colors text-white">Home</a>
-                <a href="technology.html" class="nav-link hover:text-white transition-colors">Technology</a>
-                <a href="solutions.html" class="nav-link hover:text-white transition-colors">Solutions</a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-pumice dark:text-ash">
+                <a href="index.html"
+                    class="nav-link hover:text-onyx dark:hover:text-alabaster transition-colors text-onyx dark:text-alabaster font-bold">Home</a>
+                <a href="technology.html"
+                    class="nav-link hover:text-onyx dark:hover:text-alabaster transition-colors">Technology</a>
+                <a href="solutions.html"
+                    class="nav-link hover:text-onyx dark:hover:text-alabaster transition-colors">Solutions</a>
             </div>
 
-            <!-- CTA -->
-            <div>
+            <!-- CTA & Theme Toggle -->
+            <div class="flex items-center gap-4">
+                <button onclick="toggleTheme()"
+                    class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                    aria-label="Toggle Theme">
+                    <svg class="w-5 h-5 block dark:hidden text-onyx" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                        </path>
+                    </svg>
+                    <svg class="w-5 h-5 hidden dark:block text-alabaster" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                        </path>
+                    </svg>
+                </button>
                 <a href="mailto:lucascorbanez@gmail.com"
-                    class="text-white border border-blue-600 bg-blue-600/10 px-4 py-2 rounded-md hover:bg-blue-600 hover:text-white transition-all text-sm font-medium">Get
+                    class="text-white bg-international-orange px-4 py-2 rounded-md hover:opacity-90 transition-all text-sm font-medium shadow-md shadow-international-orange/20">Get
                     Access</a>
             </div>
         </div>
@@ -52,26 +74,26 @@
         <section class="relative py-20 mb-12">
             <div class="max-w-4xl">
                 <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono mb-6">
-                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 dark:bg-white/10 border border-black/10 dark:border-white/20 text-onyx dark:text-alabaster text-xs font-mono mb-6">
+                    <span class="w-2 h-2 rounded-full bg-international-orange animate-pulse"></span>
                     STOCHASTIC OPTIMIZATION ENGINE
                 </div>
-                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8 text-white">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8 text-onyx dark:text-alabaster font-serif">
                     The Intelligent Way <br>
                     <span class="gradient-text">to Schedule.</span>
                 </h1>
-                <p class="text-xl text-gray-400 max-w-2xl leading-relaxed mb-10">
+                <p class="text-xl text-pumice dark:text-ash max-w-2xl leading-relaxed mb-10">
                     Alea Scheduler transforms randomness into structured, optimal schedules. We deliver
                     efficient,
                     adaptive, and human-aligned schedules for organizations of any scale.
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <a href="technology.html"
-                        class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/20">
+                        class="bg-international-orange text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-colors shadow-lg shadow-international-orange/20">
                         Explore Technology
                     </a>
                     <a href="solutions.html"
-                        class="glass-panel text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/5 transition-colors border border-gray-700">
+                        class="glass-panel text-onyx dark:text-alabaster px-8 py-4 rounded-lg font-semibold hover:bg-black/5 dark:hover:bg-white/5 transition-colors border border-black/10 dark:border-white/10">
                         View Solutions
                     </a>
                 </div>
@@ -79,11 +101,11 @@
         </section>
 
         <!-- What is Alea? -->
-        <section class="mb-24 glass-panel p-8 rounded-xl border border-gray-800">
-            <h2 class="text-3xl font-bold text-white mb-6">What is Alea Scheduler?</h2>
-            <p class="text-gray-300 leading-relaxed text-lg">
+        <section class="mb-24 glass-panel p-8 rounded-xl border border-black/5 dark:border-white/5">
+            <h2 class="text-3xl font-bold text-onyx dark:text-alabaster mb-6 font-serif">What is Alea Scheduler?</h2>
+            <p class="text-pumice dark:text-ash leading-relaxed text-lg">
                 Alea Scheduler is a roster optimization platform that uses <span
-                    class="text-blue-400 font-semibold">artificial intelligence</span> to transform
+                    class="text-international-orange font-semibold">artificial intelligence</span> to transform
                 scheduling
                 complexity into fair, efficient, and adaptive schedules. Unlike traditional solutions based
                 on rigid
@@ -95,41 +117,44 @@
 
         <!-- Value Proposition -->
         <section class="mb-24">
-            <h2 class="text-3xl font-bold text-white mb-12">Gains</h2>
+            <h2 class="text-3xl font-bold text-onyx dark:text-alabaster mb-12 font-serif">Gains</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass-panel p-8 rounded-xl border border-gray-800">
-                    <div class="w-10 h-10 rounded bg-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+                <div class="glass-panel p-8 rounded-xl border border-black/5 dark:border-white/5">
+                    <div
+                        class="w-10 h-10 rounded bg-international-orange/10 flex items-center justify-center text-international-orange mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
-                    <h3 class="font-bold text-white mb-2 text-xl">Time Savings</h3>
-                    <p class="text-gray-400">Reduces planning time from days to minutes.</p>
+                    <h3 class="font-bold text-onyx dark:text-alabaster mb-2 text-xl">Time Savings</h3>
+                    <p class="text-pumice dark:text-ash">Reduces planning time from days to minutes.</p>
                 </div>
-                <div class="glass-panel p-8 rounded-xl border border-gray-800">
-                    <div class="w-10 h-10 rounded bg-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+                <div class="glass-panel p-8 rounded-xl border border-black/5 dark:border-white/5">
+                    <div
+                        class="w-10 h-10 rounded bg-international-orange/10 flex items-center justify-center text-international-orange mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
-                    <h3 class="font-bold text-white mb-2 text-xl">Team Satisfaction</h3>
-                    <p class="text-gray-400">Fairer schedules that respect preferences and avoid burnout.
+                    <h3 class="font-bold text-onyx dark:text-alabaster mb-2 text-xl">Team Satisfaction</h3>
+                    <p class="text-pumice dark:text-ash">Fairer schedules that respect preferences and avoid burnout.
                     </p>
                 </div>
-                <div class="glass-panel p-8 rounded-xl border border-gray-800">
-                    <div class="w-10 h-10 rounded bg-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+                <div class="glass-panel p-8 rounded-xl border border-black/5 dark:border-white/5">
+                    <div
+                        class="w-10 h-10 rounded bg-international-orange/10 flex items-center justify-center text-international-orange mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                         </svg>
                     </div>
-                    <h3 class="font-bold text-white mb-2 text-xl">Resource Optimization</h3>
-                    <p class="text-gray-400">Intelligent allocation that avoids unnecessary overtime and
+                    <h3 class="font-bold text-onyx dark:text-alabaster mb-2 text-xl">Resource Optimization</h3>
+                    <p class="text-pumice dark:text-ash">Intelligent allocation that avoids unnecessary overtime and
                         coverage gaps.
                     </p>
                 </div>
@@ -140,32 +165,32 @@
         <section class="mb-20">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div
-                    class="p-6 rounded-lg bg-gray-900/30 border border-gray-800 hover:border-blue-500/30 transition-colors">
-                    <h3 class="font-bold text-white mb-3">Efficiency</h3>
-                    <p class="text-sm text-gray-400">Engineered for speed and resource optimization.</p>
+                    class="glass-panel p-6 rounded-lg border border-black/5 dark:border-white/5 hover:border-international-orange/30 transition-colors">
+                    <h3 class="font-bold text-onyx dark:text-alabaster mb-3">Efficiency</h3>
+                    <p class="text-sm text-pumice dark:text-ash">Engineered for speed and resource optimization.</p>
                 </div>
                 <div
-                    class="p-6 rounded-lg bg-gray-900/30 border border-gray-800 hover:border-blue-500/30 transition-colors">
-                    <h3 class="font-bold text-white mb-3">Transparency</h3>
-                    <p class="text-sm text-gray-400">Clear decision paths. No hidden logic.</p>
+                    class="glass-panel p-6 rounded-lg border border-black/5 dark:border-white/5 hover:border-international-orange/30 transition-colors">
+                    <h3 class="font-bold text-onyx dark:text-alabaster mb-3">Transparency</h3>
+                    <p class="text-sm text-pumice dark:text-ash">Clear decision paths. No hidden logic.</p>
                 </div>
                 <div
-                    class="p-6 rounded-lg bg-gray-900/30 border border-gray-800 hover:border-blue-500/30 transition-colors">
-                    <h3 class="font-bold text-white mb-3">Adaptability</h3>
-                    <p class="text-sm text-gray-400">Instantly re-optimizes when constraints shift.</p>
+                    class="glass-panel p-6 rounded-lg border border-black/5 dark:border-white/5 hover:border-international-orange/30 transition-colors">
+                    <h3 class="font-bold text-onyx dark:text-alabaster mb-3">Adaptability</h3>
+                    <p class="text-sm text-pumice dark:text-ash">Instantly re-optimizes when constraints shift.</p>
                 </div>
                 <div
-                    class="p-6 rounded-lg bg-gray-900/30 border border-gray-800 hover:border-blue-500/30 transition-colors">
-                    <h3 class="font-bold text-white mb-3">Simplicity</h3>
-                    <p class="text-sm text-gray-400">Sophisticated math, simple experience.</p>
+                    class="glass-panel p-6 rounded-lg border border-black/5 dark:border-white/5 hover:border-international-orange/30 transition-colors">
+                    <h3 class="font-bold text-onyx dark:text-alabaster mb-3">Simplicity</h3>
+                    <p class="text-sm text-pumice dark:text-ash">Sophisticated math, simple experience.</p>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="py-12 border-t border-gray-800 text-center mt-auto">
-        <p class="text-gray-500 text-sm font-mono">© 2025 Alea Technologies. Order through stochastic
+    <footer class="py-12 border-t border-black/10 dark:border-white/10 text-center mt-auto">
+        <p class="text-pumice dark:text-ash text-sm font-mono">© 2025 Alea Technologies. Order through stochastic
             intelligence.</p>
     </footer>
 

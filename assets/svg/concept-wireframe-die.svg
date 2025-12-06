@@ -1,9 +1,9 @@
 <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
     <!-- Hexagon / Cube Outline -->
-    <path d="M40 10 L 66 25 V 55 L 40 70 L 14 55 V 25 L 40 10 Z" stroke="white" stroke-width="1.5" fill="none" />
+    <path d="M40 10 L 66 25 V 55 L 40 70 L 14 55 V 25 L 40 10 Z" stroke="#1A1A1A" stroke-width="1.5" fill="none" />
     <!-- Inner Y -->
-    <path d="M40 10 V 40 M 40 40 L 66 55 M 40 40 L 14 55" stroke="white" stroke-width="1" stroke-opacity="0.5" />
+    <path d="M40 10 V 40 M 40 40 L 66 55 M 40 40 L 14 55" stroke="#1A1A1A" stroke-width="1" stroke-opacity="0.5" />
     <!-- The Stochastic Core -->
-    <circle cx="40" cy="40" r="4" fill="#3B82F6" />
-    <circle cx="40" cy="40" r="10" stroke="#3B82F6" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="40" cy="40" r="4" fill="#D94E36" />
+    <circle cx="40" cy="40" r="10" stroke="#D94E36" stroke-width="0.5" stroke-dasharray="2 2" />
 </svg>
